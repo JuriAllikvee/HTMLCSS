@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Атрибут autocomplete</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Авторизация</legend>
+            <p>
+                <label>
+                    Имя пользователя
+                    <input type="text" name="username" autocomplete="off" />
+                </label>
+            </p>
+            <p>
+                <label>
+                    Пароль
+                    <!-- Атрибут autocomplete="off" - атрибут используется для того, чтобы браузер не сохранял данные вебсайта в поле ввода, или выдавал предложенные данные -->
+                    <input type="password" name="pwd" autocomplete="off" />
+                </label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Отправить" />
+        </p>
+    </form>
+    <p>
+        <a href="http://google.com">Проверка работы атрибута формы</a><br />
+        Нажмите на ссылку, после чего нажмите на кнопку "Back". Обратите внимание что браузер не запоминает значения в поле ввода параметра.
+    </p>
+</body>
+</html>
