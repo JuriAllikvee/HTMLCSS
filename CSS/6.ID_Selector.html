@@ -1,0 +1,67 @@
+<!--
+Пример кода с использованием селекторов тегов, классов и идентификаторов.
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Селекторы</title>
+
+    <style type="text/css">
+        /* Стили для тега body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Segoe UI, Arial, sans-serif;
+        }
+
+        /* Селектор тега p */
+        p {
+            font-size: 18pt;
+            color: green;
+        }
+
+        /* Селектор класса */
+        .class {
+            color: red;
+            font-size: 20px;
+        }
+
+        /* Селектор идентификатора */
+        #Id1 {
+            font-family: Segoe UI;
+            font-size: 18pt;
+            color: blue;
+        }
+
+        /* Стили для div */
+        div {
+            background-color: yellow;
+            color: black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Примеры использования селекторов -->
+
+    <!-- Параграф с теговым селектором -->
+    <p>Простой параграф</p>
+
+    <!-- Параграф с идентификатором -->
+    <p id="Id1">Еще один простой параграф №1</p>
+
+    <!-- Параграф с классом -->
+    <p id="P1" class="class">Еще один простой параграф №2</p>
+
+    <!-- Параграф с комментариями -->
+    <!--<p id="Id1">Еще один простой параграф №3</p>-->
+
+    <!-- Блочный элемент с параграфом -->
+    <div>
+        <p>Также еще один простой параграф, который находится в блочном элементе</p>
+    </div>
+</body>
+</html>
