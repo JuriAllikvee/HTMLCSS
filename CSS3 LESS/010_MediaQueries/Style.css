@@ -2,18 +2,17 @@ body {
     font-family: 'Segoe UI';
     -moz-background-size: 50px 50px;
     -o-background-size: 50px 50px;
-    -webkit-backdrop-size: 50px 50px;
+    -webkit-background-size: 50px 50px;
     background-size: 50px 50px;
-
-    background-color: #ac0;
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%,
-        transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-    background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%,
-        transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%,
-        transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    /* фон документа */
+    background-color: #ae0;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: -ms-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
 }
 
+/* Стиль шапки */
 header {
     background-color: #d7e689;
     padding: 10px;
@@ -21,25 +20,28 @@ header {
     width: 960px;
     margin: auto;
 }
-    header h1 {
-        margin: 0px;
-        padding: 0px;
-        color: white;
-    }
 
+header h1 {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+/* Стиль главного баннера */
 .main-banner {
     height: 160px;
-    background-color: #ffd800;
+    background-color: #ff4800;
     margin: 10px;
     border: 1px solid white;
 }
 
+/* контекст в котором размещается колонки */
 #main {
     width: 960px;
-    margin: auto;
     display: -moz-box;
-    display: -ms-flexbox;
+    display: -ms-box;
     display: -webkit-box;
+    display: box;
     display: flexbox;
 }
 
@@ -53,32 +55,41 @@ header {
 
 .small-banner {
     height: 90px;
-    width: 270px;
+    width: 272px;
     margin: auto 10px;
     background-color: blue;
     border: 1px solid white;
 }
 
+/* Стиль для мобильных устройств с разрешением экрана ниже 960px*/
 @media screen and (max-width: 960px) {
-    
+    /* устанавливаем ширину шапки равную ширине экрана*/
     header {
+        width: 100%;
+    }
+
+    /* отменяем flexbox для главного контейнера изменяя display на block*/
+    #main {
         margin: auto;
         display: block;
         width: 100%;
     }
 
+    /* убираем баннер */
     .main-banner {
         display: none;
     }
 
+    /* теперь колонки будут отображаться на всю ширину страницы*/
     .block {
         width: 97%;
         min-height: 100px;
     }
 
+    /* с помощью float указываем что маленькие баннеры должны отображаться в левой части блока с информацией*/
     .small-banner {
-        height: 90px;
-        width: 270px;
+        height: 99px;
+        width: 272px;
         float: left;
         margin: 0px 10px 0px 0px;
     }
