@@ -1,0 +1,150 @@
+/* Animation properties */
+.star {
+  animation: star 10s ease-out infinite reverse;
+}
+
+.wars {
+  animation: wars 10s ease-out infinite reverse;
+}
+
+.byline {
+  animation: fade-out-in 6s ease-in-out infinite, color-change-byline 10s linear infinite;
+}
+
+/* Keyframes */
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em);
+  }
+  20% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+@keyframes wars {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(0.5em);
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+/* New animation for fade out and in */
+@keyframes fade-out-in {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Color changing animation */
+@keyframes color-change-byline {
+  0% {
+    color: #fff;
+  }
+  25% {
+    color: #f00;
+  }
+  50% {
+    color: #0f0;
+  }
+  75% {
+    color: #00f;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+/* General styles */
+.starwars-demo {
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+body {
+  background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+  margin: 0;
+  overflow: hidden;
+}
+
+.starwars-demo {
+  height: 17em;
+  left: 50%;
+  position: absolute;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  width: 34em;
+}
+
+img {
+  width: 100%;
+}
+
+.star, .wars, .byline {
+  position: absolute;
+}
+
+.star {
+  top: -0.75em;
+}
+
+.wars {
+  bottom: -0.5em;
+}
+
+.byline {
+  color: #fff;
+  font-family: "ITC Serif Gothic", Lato;
+  font-size: 2.25em;
+  left: -2em;
+  letter-spacing: 0.4em;
+  right: -2em;
+  text-align: center;
+  text-transform: uppercase;
+  top: 29%;
+  position: absolute;
+
+  /* Combined animations */
+  animation: fade-out-in 6s ease-in-out infinite, color-change-byline 10s linear infinite;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+  .starwars-demo {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .starwars-demo {
+    font-size: 7px;
+  }
+}
